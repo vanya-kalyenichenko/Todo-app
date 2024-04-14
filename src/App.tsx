@@ -14,17 +14,17 @@ import { Notifications } from './components/Notifications/Notifications';
 const USER_ID = '/todos?userId=12151';
 
 export const App: React.FC = () => {
-  const {
-    todos, setTodos, handleErrorMessage, errorMessage,
-  } = useContext(TodosContext);
+  const { todos, setTodos, handleErrorMessage, errorMessage } =
+    useContext(TodosContext);
 
   useEffect(() => {
-    todoService.getTodos(USER_ID)
+    todoService
+      .getTodos(USER_ID)
       .then(setTodos)
       .catch(() => {
         handleErrorMessage(Error.Load);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -46,16 +46,13 @@ export const App: React.FC = () => {
 
         <TodoList />
 
-        {!!todos.length && (
-          <Footer />
-        )}
+        {!!todos.length && <Footer />}
       </div>
 
       {/* Notification is shown in case of any error */}
       {/* Add the 'hidden' class to hide the message smoothly */}
 
       {errorMessage && <Notifications />}
-
     </div>
   );
 };

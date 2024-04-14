@@ -1,7 +1,5 @@
 import cn from 'classnames';
-import React, {
-  useContext, useEffect, useRef, useState,
-} from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { TodosContext } from '../../../../Context/TodosContext';
 import { Error } from '../../../../types/Error';
 

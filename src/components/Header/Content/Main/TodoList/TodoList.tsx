@@ -22,21 +22,10 @@ export const TodoList: React.FC = () => {
   return (
     <section className="todoapp__main" data-cy="TodoList">
       {filteredTodos.map(todo => (
-        <TodoItem
-          todo={todo}
-          key={todo.id}
-        />
+        <TodoItem todo={todo} key={todo.id} />
       ))}
 
-      {tempTodo
-        && (
-          <TodoItem
-            isTempTodo
-            todo={tempTodo}
-            key={tempTodo.id}
-          />
-        )}
-
+      {tempTodo && <TodoItem isTempTodo todo={tempTodo} key={tempTodo.id} />}
     </section>
   );
 };

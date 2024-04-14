@@ -7,9 +7,8 @@ import './styles/index.scss';
 import { App } from './App';
 import { TodosProvider } from './Context/TodosContext';
 
-createRoot(document.getElementById('root') as HTMLDivElement)
-  .render(
-    <TodosProvider>
-      <App />
-    </TodosProvider>,
-  );
+createRoot(document.getElementById('root') as HTMLDivElement).render(
+  <TodosProvider>
+    <App />
+  </TodosProvider>,
+);

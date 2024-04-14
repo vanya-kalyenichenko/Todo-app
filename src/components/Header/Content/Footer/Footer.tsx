@@ -5,12 +5,8 @@ import { TodosContext } from '../../../../Context/TodosContext';
 import { Todo } from '../../../../types/Todo';
 
 export const Footer: React.FC = () => {
-  const {
-    todos,
-    handleStatus,
-    status,
-    handleDeleteCompleted,
-  } = useContext(TodosContext);
+  const { todos, handleStatus, status, handleDeleteCompleted } =
+    useContext(TodosContext);
 
   const leftTodos = todos.filter(todo => !todo.completed);
   const completedTodos = todos.filter((todo: Todo) => todo.completed);
