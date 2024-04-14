@@ -1,6 +1,6 @@
 # Todo App with API 🕹
 
-> Here is [DEMO]()
+> Here is [DEMO](https://vanya-kalyenichenko.github.io/Todo-app/)
 
 ## Project Overview
 
@@ -10,7 +10,7 @@ The application allows users to create, edit, and delete tasks to ensure an orga
 ## Installation Instructions
 1. Clone the repository:
     ```bash
-    git clone 
+    git clone https://github.com/vanya-kalyenichenko/Todo-app.git
     ```
 2. Install a package:
     ```bash
